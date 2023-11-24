@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Decentralized Lottery System</title>
+	<style>
+		body {
+			background-color: rgb(66, 164, 127);
+			color: white;
+			background-image: url(image/dapp.png);
+			background-size: cover;
+		}
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		footer {
+			text-align: center;
+			margin-top: 50px;
+			padding-top: 10px;
+			border-top: 1px solid white;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+		li {
+			float: left;
+		}
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		li a:hover {
+			background-color: #111;
+		}
+		#manager-box {
+			display: none;
+			margin-top: 20px;
+			padding: 20px;
+			background-color: rgba(255, 255, 255, 0.2);
+			border-radius: 10px;
+		}
+		input[type="text"] {
+			margin-bottom: 10px;
+			padding: 5px;
+			border-radius: 5px;
+			border: none;
+			background-color: rgba(255, 255, 255, 0.8);
+			color: #222;
+			width: 100%;
+		}
+		button {
+			background-color: #fff;
+			color: #222;
+			border: none;
+			padding: 5px 10px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #ddd;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="./app.js"></script>
+</head>
+<body>
+	<ul>
+		<li><a href="#" id="lottery-system">Lottery System</a></li>
+		<li><a href="#" id="manager-link">Manager</a></li>
+		<li><a href="#" id="player-link">Player</a></li>
+	</ul>
+	<div class="container">
+		<h1>Decentralized Lottery System</h1>
+		<div id="manager-box">
+			<input type="text" id="connected-account" readonly>
+			<input type="text" id="winner" readonly>
+			<button id="get-winner">Click for winner</button>
+			<input type="text" id="balance" readonly>
+			<button id="get-balance">Click for balance</button>
+		</div>
+		<select id="userType">
+			<option value="manager">Manager</option>
+			<option value="player">Player</option>
+		</select>
+	</div>
+</body>
+</html>
